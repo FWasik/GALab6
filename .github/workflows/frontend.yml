@@ -33,5 +33,5 @@ jobs:
           file: ./dockerfile.v1
           push: true
           tags: |
-            dilreni2137/lab:ghfront1
+            ${{ secrets.DOCKER_HUB_USERNAME }}/lab:ghfront1
           
