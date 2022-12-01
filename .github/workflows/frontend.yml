@@ -21,8 +21,8 @@ jobs:
       - name: Login to DockerHub
         uses: docker/login-action@v1 
         with:
-          username: ${DOCKER_USERNAME}
-          password: ${DOCKER_TOKEN}
+          username: ${{ secrets.DOCKER_HUB_USERNAME }}
+          password: ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}
 
 
       - name: Build and push
@@ -33,5 +33,5 @@ jobs:
           file: ./dockerfile.v1
           push: true
           tags: |
-              ${DOCKER_USERNAME}/lab:ghfront1
+            dilreni2137/lab:ghfront1
           
