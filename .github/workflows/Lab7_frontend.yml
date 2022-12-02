@@ -50,7 +50,7 @@ jobs:
           file: ./dockerfile.v1
           push: true
           tags: |
-            ${{secrets.DOCKER_HUB_USERNAME}}
+            ${{secrets.DOCKER_HUB_USERNAME}}/lab:ghfront2
       
       #Przenies cache'a
       - name: Move cache
