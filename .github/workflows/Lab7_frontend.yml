@@ -45,12 +45,12 @@ jobs:
         with:
           cache-from: type=local,src=/tmp/.buildx-cache
           cache-to: type=local,dest=/tmp/.buildx-cache-new,mode=max
-          platforms: linux/amd64 
+          platforms: linux/amd64
           context: ./
           file: ./dockerfile.v1
           push: true
           tags: |
-            ${{ secrets.DOCKER_HUB_USERNAME }}/lab:ghfront2
+            ${{ secrets.DOCKER_HUB_USERNAME }}/lab:ghfront1
       
       #Przenies cache'a
       - name: Move cache
